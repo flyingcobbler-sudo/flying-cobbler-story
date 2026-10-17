@@ -10,13 +10,11 @@
 *{box-sizing:border-box}
 body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sans-serif;min-height:100svh}
 .app{min-height:100svh;max-width:560px;margin:auto;background:linear-gradient(155deg,#f8f7ef 0%,#edf1e8 48%,#103522 48%,#0c281b 100%);padding:18px 18px 26px;display:flex;flex-direction:column;align-items:center}
-.brand-row{width:100%;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:14px;margin:0 auto 20px;min-height:118px}
+.brand-row{width:100%;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:14px;margin:0 auto 20px;min-height:118px;background:#fff;border-radius:14px;padding:8px 10px}
 .brand{display:flex;align-items:center;justify-content:center;min-width:0;height:108px}
 .brand img{max-width:100%;max-height:100%;object-fit:contain}
 .brand-divider{height:92px;background:#aebcaf;width:1px}
-.sdg-logo{width:100px;height:100px;border-radius:50%;margin:auto;position:relative;background:conic-gradient(#e5243b 0deg 21deg,#dda63a 21deg 42deg,#4c9f38 42deg 63deg,#c5192d 63deg 84deg,#ff3a21 84deg 105deg,#26bde2 105deg 126deg,#fcc30b 126deg 147deg,#a21942 147deg 168deg,#fd6925 168deg 189deg,#dd1367 189deg 210deg,#fd9d24 210deg 231deg,#bf8b2e 231deg 252deg,#3f7e44 252deg 273deg,#0a97d9 273deg 294deg,#56c02b 294deg 315deg,#00689d 315deg 336deg,#19486a 336deg 360deg);display:grid;place-items:center}
-.sdg-logo:before{content:"";position:absolute;inset:17px;background:var(--cream);border-radius:50%}
-.sdg-logo span{position:relative;text-align:center;color:#1684ad;font-weight:900;font-size:13px;line-height:1.02;max-width:66px}
+.sdg-logo{width:100%;max-width:150px;height:auto;max-height:82px;object-fit:contain;display:block;margin:auto;background:#fff}
 .step-title{margin:0 0 16px;text-align:center;font-size:clamp(17px,4.3vw,23px);line-height:1.35;font-weight:800;color:var(--green);background:#edf1df;border-radius:22px;padding:18px 12px;width:100%}
 .step-title .big{display:block;font-size:clamp(20px,5vw,28px);text-transform:uppercase;margin:4px 0}
 .frame{width:100%;height:min(54svh,500px);min-height:290px;border:2px dashed #d6e2d4;border-radius:25px;background:linear-gradient(145deg,#214b32,#0d2d1e);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 12px 28px #0002;margin-top:0}
@@ -52,7 +50,7 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
 .share-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%}.share-grid .btn{padding:12px 5px;font-size:13px}
 .status{min-height:18px;color:#e0eee1;font-size:12px;text-align:center;margin-top:10px;line-height:1.4}
 @media(min-width:600px){.app{margin:16px auto;min-height:calc(100svh - 32px);border-radius:28px;overflow:hidden;box-shadow:0 18px 55px #0003}.frame{height:450px}.photo-result{height:270px}}
-@media(max-width:360px){.brand-row{gap:8px}.sdg-logo{width:82px;height:82px}.sdg-logo:before{inset:14px}.sdg-logo span{font-size:11px}.brand{height:90px}}
+@media(max-width:360px){.brand-row{gap:8px}.sdg-logo{max-height:64px}.brand{height:90px}}
 </style>
 </head>
 <body>
@@ -60,7 +58,7 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
   <header class="brand-row" aria-label="Flying Cobbler and United Nations Sustainable Development Goals">
     <div class="brand"><img src="flying-cobbler-logo.jpg" alt="Flying Cobbler — Expert Cobblers Destination"></div>
     <div class="brand-divider" aria-hidden="true"></div>
-    <div class="sdg-logo" role="img" aria-label="Sustainable Development Goals logo"><span>SUSTAINABLE<br>DEVELOPMENT<br>GOALS</span></div>
+    <img class="sdg-logo" src="un-sustainable-development-goals.png" alt="United Nations Sustainable Development Goals">
   </header>
 
   <section id="uploadStage" style="width:100%;display:flex;flex-direction:column;align-items:center">
@@ -75,7 +73,7 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
 
   <section id="resultStage" class="hidden" style="width:100%">
     <article class="achievement" id="achievementCard">
-      <header class="brand"><img src="flying-cobbler-logo.jpg" alt="Flying Cobbler"></header>
+      <header class="brand-row" aria-label="Flying Cobbler and United Nations Sustainable Development Goals"><div class="brand"><img src="flying-cobbler-logo.jpg" alt="Flying Cobbler"></div><div class="brand-divider" aria-hidden="true"></div><img class="sdg-logo" src="un-sustainable-development-goals.png" alt="United Nations Sustainable Development Goals"></header>
       <h2>MY SUSTAINABILITY ACHIEVEMENT</h2>
       <div class="recycle" aria-label="recycling symbol">♻️</div>
       <img id="resultPhoto" class="photo-result" alt="Your repaired shoes">
@@ -87,11 +85,6 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
     </article>
     <h3 class="share-title">Share your achievement</h3>
     <div class="tag-reminder"><strong>📣 Don't forget to tag @flyingcobbler!</strong>When you share on Instagram, add the <b>@flyingcobbler</b> mention to your Story so we can celebrate your achievement too.</div>
-    <div class="caption-box"><label for="caption">SUGGESTED CAPTION</label><textarea id="caption" readonly>I gave my shoes a new life! ♻️🌍
-
-Every responsible choice matters.
-
-Made possible with Flying Cobbler. @flyingcobbler</textarea><button class="btn btn-primary" id="copyCaption" type="button" style="width:100%;margin-top:8px">Copy caption</button></div>
     <div class="share-grid">
       <button class="btn btn-share" id="shareBtn" type="button">Share Card</button>
       <button class="btn btn-share" id="downloadBtn" type="button">Download Card</button>
@@ -125,17 +118,20 @@ function makeBlob(){return new Promise(resolve=>{
  c.fillStyle='#103522';c.fillRect(0,0,1080,1920);c.fillStyle='#f8f7ef';c.beginPath();c.roundRect(35,35,1010,1850,35);c.fill();c.strokeStyle='#c5d2b6';c.lineWidth=7;c.stroke();
  function contain(im,x,y,mw,mh){const s=Math.min(mw/im.naturalWidth,mh/im.naturalHeight);c.drawImage(im,x+(mw-im.naturalWidth*s)/2,y+(mh-im.naturalHeight*s)/2,im.naturalWidth*s,im.naturalHeight*s)}
  function cover(im,x,y,ww,hh){const ir=im.naturalWidth/im.naturalHeight,cr=ww/hh;let sx=0,sy=0,sw=im.naturalWidth,sh=im.naturalHeight;if(ir>cr){sw=im.naturalHeight*cr;sx=(im.naturalWidth-sw)/2}else{sh=im.naturalWidth/cr;sy=(im.naturalHeight-sh)/2}c.save();c.beginPath();c.roundRect(x,y,ww,hh,25);c.clip();c.drawImage(im,sx,sy,sw,sh,x,y,ww,hh);c.restore()}
- function draw(){c.textAlign='center';if(logo.complete&&logo.naturalWidth)contain(logo,330,65,420,205);else{c.fillStyle='#103522';c.font='bold 45px Arial';c.fillText('FLYING COBBLER',540,170)}
+ function draw(){c.textAlign='center';if(logo.complete&&logo.naturalWidth)contain(logo,95,70,390,190);else{c.fillStyle='#103522';c.font='bold 40px Arial';c.fillText('FLYING COBBLER',290,170)}
+ const sdgImg=new Image();sdgImg.onload=()=>{contain(sdgImg,590,95,390,125);finishDraw()};sdgImg.onerror=finishDraw;
+ function finishDraw(){c.strokeStyle='#aebcaf';c.lineWidth=2;c.beginPath();c.moveTo(540,80);c.lineTo(540,260);c.stroke();
  c.fillStyle='#103522';c.font='bold 37px Arial';c.fillText('MY SUSTAINABILITY ACHIEVEMENT',540,320);c.font='105px Arial';c.fillText('♻️',540,450);cover(img,90,500,900,620);
  c.fillStyle='#bf8b2e';c.beginPath();c.roundRect(120,530,210,200,20);c.fill();c.fillStyle='#fff';c.font='bold 70px Arial';c.fillText('12',225,615);c.font='bold 21px Arial';c.fillText('RESPONSIBLE',225,655);c.fillText('CONSUMPTION',225,684);c.fillText('AND PRODUCTION',225,713);
  c.fillStyle='#193a29';c.font='34px Arial';c.fillText('I gave my shoes a new life',540,1200);c.fillText('instead of discarding them. I’m proud',540,1250);c.fillText('to make a more sustainable choice',540,1300);c.fillText('and help reduce waste.',540,1350);
  c.strokeStyle='#9aab98';c.lineWidth=2;c.beginPath();c.moveTo(130,1420);c.lineTo(950,1420);c.stroke();c.fillStyle='#103522';c.font='bold 30px Arial';c.fillText('EVERY RESPONSIBLE CHOICE MATTERS. 🌍',540,1490);c.font='25px Arial';c.fillText('My sustainability achievement, made possible',540,1570);c.fillText('with Flying Cobbler.',540,1610);resolve(canvas)}
+ sdgImg.src='un-sustainable-development-goals.png';
+ }
  if(img.complete&&img.naturalWidth){if(logo.complete)draw();else logo.onload=draw}else img.onload=()=>{if(logo.complete)draw();else logo.onload=draw};
 })}
 async function downloadCard(){if(!selectedFile){statusEl.textContent='Please add your shoe photo first.';return}const canvas=await makeBlob();canvas.toBlob(blob=>{if(!blob){statusEl.textContent='Unable to prepare card. Please try again.';return}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='flying-cobbler-sustainability-achievement.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);statusEl.textContent='Your card has been downloaded.'},'image/png')}
 document.getElementById('downloadBtn').addEventListener('click',downloadCard);
 document.getElementById('shareBtn').addEventListener('click',async()=>{if(!selectedFile){statusEl.textContent='Please add your shoe photo first.';return}const canvas=await makeBlob();canvas.toBlob(async blob=>{if(!blob)return;const file=new File([blob],'flying-cobbler-sustainability-achievement.png',{type:'image/png'});if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'My Sustainability Achievement',text:'I gave my shoes a new life! ♻️🌍 Remember to tag @flyingcobbler on Instagram.'});statusEl.textContent='Choose where to share your card. Add @flyingcobbler as an Instagram Story mention.'}catch(e){if(e.name!=='AbortError')statusEl.textContent='Sharing is unavailable here. Please download the card instead.'}}else{downloadCard();statusEl.textContent='Card downloaded. Upload it to your Story or Status and remember to tag @flyingcobbler on Instagram.'}},'image/png')});
-document.getElementById('copyCaption').addEventListener('click',async()=>{const caption=document.getElementById('caption').value;try{await navigator.clipboard.writeText(caption);statusEl.textContent='Caption copied. Paste it into your post or Story text.'}catch(e){document.getElementById('caption').select();statusEl.textContent='Select and copy the caption, then paste it into Instagram.'}});
 document.getElementById('instagramBtn').addEventListener('click',()=>{downloadCard();window.open('https://www.instagram.com/','_blank','noopener');statusEl.textContent='Card downloaded. In Instagram, add it to your Story and use the Mention sticker to tag @flyingcobbler.'});
 document.getElementById('againBtn').addEventListener('click',()=>{document.getElementById('resultStage').classList.add('hidden');document.getElementById('uploadStage').classList.remove('hidden');document.getElementById('frameImage').classList.add('hidden');document.getElementById('placeholder').classList.remove('hidden');galleryInput.value='';cameraInput.value='';selectedFile=null;statusEl.textContent='Choose another photo.';window.scrollTo({top:0,behavior:'smooth'})});
 </script>
