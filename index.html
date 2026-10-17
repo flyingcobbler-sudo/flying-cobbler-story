@@ -73,8 +73,8 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
   <section id="resultStage" class="hidden" style="width:100%">
     <article class="achievement" id="achievementCard">
       <header class="brand-row" aria-label="Flying Cobbler and United Nations Sustainable Development Goals"><div class="brand"><img src="flying-cobbler-logo.jpg" alt="Flying Cobbler"></div><div class="brand-divider" aria-hidden="true"></div><img class="sdg-logo" src="un-sustainable-development-goals.png" alt="United Nations Sustainable Development Goals"></header>
-      <h2>YOUR SUSTAINABILITY<br>ACHIEVEMENT BADGE</h2>
-      <div class="impact-pill">♻️ MY REPAIRED SHOES<br>MADE A DIFFERENCE</div>
+      <h2>MY SUSTAINABILITY ACHIEVEMENT</h2>
+      <div class="recycle" aria-label="recycling symbol">♻️</div>
       <img id="resultPhoto" class="photo-result" alt="Your repaired shoes">
       <div class="benefit-grid" aria-label="Sustainability benefits">
         <div class="benefit"><div class="benefit-icon">🌱</div><div class="benefit-label">EXTENDS<br>PRODUCT LIFE</div></div>
@@ -125,7 +125,7 @@ function makeBlob(){return new Promise(resolve=>{
  function draw(){c.textAlign='center';if(logo.complete&&logo.naturalWidth)contain(logo,95,70,390,190);else{c.fillStyle='#103522';c.font='bold 40px Arial';c.fillText('FLYING COBBLER',290,170)}
  const sdgImg=new Image();sdgImg.onload=()=>{contain(sdgImg,590,95,390,125);finishDraw()};sdgImg.onerror=finishDraw;
  function finishDraw(){c.strokeStyle='#aebcaf';c.lineWidth=2;c.beginPath();c.moveTo(540,80);c.lineTo(540,260);c.stroke();
- c.fillStyle='#103522';c.font='bold 34px Arial';c.fillText('YOUR SUSTAINABILITY ACHIEVEMENT',540,320);c.fillStyle='#075b35';c.beginPath();c.roundRect(290,365,500,110,25);c.fill();c.fillStyle='#fff';c.font='bold 28px Arial';c.fillText('♻️ MY REPAIRED SHOES',540,410);c.fillText('MADE A DIFFERENCE',540,448);cover(img,90,500,900,620);
+ c.fillStyle='#103522';c.font='bold 37px Arial';c.fillText('MY SUSTAINABILITY ACHIEVEMENT',540,320);c.font='105px Arial';c.fillText('♻️',540,450);cover(img,90,500,900,620);
  c.fillStyle='#193a29';c.font='34px Arial';c.fillText('I gave my shoes a new life',540,1200);c.fillText('instead of discarding them. I’m proud',540,1250);c.fillText('to make a more sustainable choice',540,1300);c.fillText('and help reduce waste.',540,1350);
  const benefitXs=[170,420,660,910];const benefitEmojis=['🌱','♻️','☁️','🌿'];const benefitLines=[['EXTENDS','PRODUCT LIFE'],['REDUCES','WASTE'],['LOWER CARBON','FOOTPRINT'],['SUPPORTS A','GREENER PLANET']];c.textAlign='center';for(let i=0;i<4;i++){c.fillStyle='#dff0a9';c.beginPath();c.arc(benefitXs[i],1410,48,0,Math.PI*2);c.fill();c.font='54px Arial';c.fillText(benefitEmojis[i],benefitXs[i],1428);c.fillStyle='#103522';c.font='bold 17px Arial';c.fillText(benefitLines[i][0],benefitXs[i],1490);c.fillText(benefitLines[i][1],benefitXs[i],1515)}c.strokeStyle='#9aab98';c.lineWidth=2;c.beginPath();c.moveTo(130,1570);c.lineTo(950,1570);c.stroke();c.fillStyle='#103522';c.font='bold 30px Arial';c.fillText('EVERY RESPONSIBLE CHOICE MATTERS. 🌍',540,1635);c.font='25px Arial';c.fillText('My sustainability achievement, made possible',540,1710);c.fillText('with Flying Cobbler.',540,1750);resolve(canvas)}
  sdgImg.src='un-sustainable-development-goals.png';

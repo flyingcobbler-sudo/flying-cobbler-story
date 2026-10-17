@@ -1,16 +1,16 @@
-FLYING COBBLER — SUSTAINABILITY BENEFIT ICON UPDATE
+FLYING COBBLER SUSTAINABILITY STORY — FINAL CODING
 
-Replace index.html in your GitHub repository root with this file.
-Keep these assets in the same repository root:
+Upload index.html to the root of your GitHub repository, replacing the previous index.html.
+Keep these image files in the repository root:
 - flying-cobbler-logo.jpg
 - un-sustainable-development-goals.png
 
-Changes:
-- Removed the gold SDG 12 / “Responsible Consumption and Production” badge from the achievement card.
-- Added four benefit icons and labels, based on the concept you approved:
-  1. Extends Product Life
-  2. Reduces Waste
-  3. Lower Carbon Footprint
-  4. Supports a Greener Planet
-- Applied the change to both the on-screen card and downloaded image.
-- Kept the rest of the flow and Instagram @flyingcobbler reminder.
+Second-page achievement card:
+- Heading: MY SUSTAINABILITY ACHIEVEMENT
+- Directly below the heading: ♻️ only (no extra words beside or beneath the symbol)
+- Shoe photo
+- Four benefit icons: Extends Product Life, Reduces Waste, Lower Carbon Footprint, Supports a Greener Planet
+- Existing sustainability footer and @flyingcobbler share reminder remain.
+
+The generated/downloaded card uses the same heading and recycle symbol-only layout.
+Commit changes to GitHub; Vercel should redeploy automatically if connected.
