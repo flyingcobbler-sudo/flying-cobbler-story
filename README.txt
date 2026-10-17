@@ -1,16 +1,15 @@
-FLYING COBBLER SUSTAINABILITY STORY — UPDATED FILES
+FLYING COBBLER SUSTAINABILITY STORY — MOCKUP-ALIGNED VERSION
 
-Upload/replace index.html in the root of your GitHub repository.
-Keep these two image files in the same repository root:
-- flying-cobbler-logo.jpg (your existing Flying Cobbler logo)
-- un-sustainable-development-goals.png (the UN SDGs logo you supplied)
+Replace index.html in your GitHub repository root with this version.
+Keep flying-cobbler-logo.jpg and un-sustainable-development-goals.png in the repository root.
 
-Updates in this version:
-- First-page header has a white background.
-- Uses your supplied UN Sustainable Development Goals logo on the right, with Flying Cobbler on the left.
-- The completed achievement card uses the same two-logo header.
-- Removed the suggested-caption section.
-- Keeps the photo upload, achievement card, download/share buttons and @flyingcobbler tagging reminder.
+This version more closely matches the approved visual concept:
+- white page background and Flying Cobbler / UN SDGs logos side-by-side
+- dark forest-green photo frame, subtle shoe watermark and leaf accents
+- heading: “Get Your Sustainability Achievement Badge for Your Repaired Shoes”
+- photo prompt: “Tap to Upload Your Shoes”
+- achievement card with both logos and a green achievement message
+- no suggested caption section
+- sharing/download buttons and @flyingcobbler reminder
 
-If Vercel is connected to the GitHub repository, it should redeploy after you commit the files.
-Instagram still requires customers to add @flyingcobbler as a Story mention inside Instagram.
+Commit the files to GitHub; Vercel should redeploy if connected.

@@ -9,17 +9,17 @@
 :root{--green:#103522;--cream:#f8f7ef;--gold:#bf8b2e;--ink:#193a29}
 *{box-sizing:border-box}
 body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sans-serif;min-height:100svh}
-.app{min-height:100svh;max-width:560px;margin:auto;background:linear-gradient(155deg,#f8f7ef 0%,#edf1e8 48%,#103522 48%,#0c281b 100%);padding:18px 18px 26px;display:flex;flex-direction:column;align-items:center}
-.brand-row{width:100%;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:14px;margin:0 auto 20px;min-height:118px;background:#fff;border-radius:14px;padding:8px 10px}
+.app{min-height:100svh;max-width:560px;margin:auto;background:#fff;padding:18px 18px 26px;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
+.brand-row{width:100%;display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;gap:14px;margin:0 auto 20px;min-height:118px;background:#fff;border-radius:14px;padding:8px 10px;position:relative;z-index:2}
 .brand{display:flex;align-items:center;justify-content:center;min-width:0;height:108px}
 .brand img{max-width:100%;max-height:100%;object-fit:contain}
 .brand-divider{height:92px;background:#aebcaf;width:1px}
 .sdg-logo{width:100%;max-width:150px;height:auto;max-height:82px;object-fit:contain;display:block;margin:auto;background:#fff}
-.step-title{margin:0 0 16px;text-align:center;font-size:clamp(17px,4.3vw,23px);line-height:1.35;font-weight:800;color:var(--green);background:#edf1df;border-radius:22px;padding:18px 12px;width:100%}
+.step-title{margin:0 0 24px;text-align:center;font-size:clamp(17px,4.3vw,23px);line-height:1.35;font-weight:800;color:var(--green);background:#fff;border-radius:22px;padding:18px 12px;width:100%}
 .step-title .big{display:block;font-size:clamp(20px,5vw,28px);text-transform:uppercase;margin:4px 0}
 .frame{width:100%;height:min(54svh,500px);min-height:290px;border:2px dashed #d6e2d4;border-radius:25px;background:linear-gradient(145deg,#214b32,#0d2d1e);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 12px 28px #0002;margin-top:0}
 .frame:focus-visible,button:focus-visible{outline:3px solid #bf8b2e;outline-offset:3px}
-.frame img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}
+.frame img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}.frame:before{content:'👟';position:absolute;font-size:clamp(130px,32vw,230px);opacity:.055;transform:rotate(-18deg);top:23%;left:14%;filter:grayscale(1)}.leaf{position:absolute;z-index:2;font-size:64px;line-height:1;opacity:.95;pointer-events:none;filter:saturate(1.15)}.leaf-top-left{top:4px;left:0;transform:rotate(-35deg)}.leaf-top-right{top:4px;right:0;transform:rotate(35deg) scaleX(-1)}.leaf-bottom-left{bottom:12px;left:-8px;transform:rotate(-25deg)}.leaf-bottom-right{bottom:12px;right:-8px;transform:rotate(25deg) scaleX(-1)}
 .frame .placeholder{position:relative;z-index:1;text-align:center;padding:18px;text-shadow:0 2px 8px #0005}
 .camera-icon{font-size:56px;line-height:1.2;margin-bottom:14px}
 .frame strong{display:block;font-size:20px}
@@ -30,10 +30,10 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
 .btn-share{background:var(--green);color:#fff}
 .hint{color:#d8e7d9;text-align:center;font-size:12px;line-height:1.5;margin:12px 6px 0}
 .hidden{display:none!important}
-.achievement{width:100%;background:var(--cream);border:3px solid #c5d2b6;border-radius:24px;padding:16px 15px 18px;text-align:center;box-shadow:0 12px 28px #0002}
+.achievement{width:100%;background:linear-gradient(180deg,#fffdf5,#f8f7ef);border:1px solid #e5e6d7;border-radius:24px;padding:16px 15px 18px;text-align:center;box-shadow:0 12px 28px #0002}
 .achievement .brand{height:82px;width:125px;margin:0 auto 3px}
 .achievement h2{font-size:19px;color:var(--green);margin:4px 0 6px;line-height:1.2}
-.recycle{font-size:68px;line-height:1.12;margin:0 0 10px}
+.recycle{font-size:68px;line-height:1.12;margin:0 0 10px}.impact-pill{display:inline-block;background:#075b35;color:#fff;border-radius:18px;padding:12px 18px;margin:10px auto 14px;font-size:clamp(14px,3.8vw,18px);font-weight:800;line-height:1.35}
 .photo-result{width:100%;height:245px;object-fit:cover;border-radius:15px;display:block;background:#dce5d9}
 .sdg12{position:relative;margin:-232px 0 182px 8px;background:var(--gold);border:2px solid white;border-radius:12px;color:white;width:100px;height:100px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:0 2px 8px #0002}
 .sdg12 b{font-size:32px;line-height:1}.sdg12 span{font-size:9px;font-weight:800;line-height:1.15;margin-top:4px}.sdg12 .infinity{font-size:24px}
@@ -42,7 +42,7 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
 .footerline{font-weight:800;font-size:14px;color:var(--green);line-height:1.4}
 .attribution{font-size:12px;line-height:1.4;margin:8px 6px 0}
 .share-title{color:#fff;text-align:center;font-weight:800;font-size:16px;margin:18px 0 10px}
-.tag-reminder{background:#f8f7ef;border:1px solid #c5d2b6;border-radius:14px;padding:13px 14px;width:100%;text-align:center;color:#103522;font-size:14px;line-height:1.5;margin:0 0 10px}
+.tag-reminder{background:#eef4e4;border:1px solid #e3ebd6;border-radius:18px;padding:13px 14px;width:100%;text-align:center;color:#103522;font-size:14px;line-height:1.5;margin:12px 0 10px}
 .tag-reminder strong{display:block;font-size:16px;margin-bottom:3px}
 .caption-box{background:#f8f7ef;border-radius:14px;padding:12px;width:100%;margin:0 0 10px;color:#193a29}
 .caption-box label{font-size:12px;font-weight:800;display:block;margin-bottom:6px}
@@ -61,9 +61,9 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
     <img class="sdg-logo" src="un-sustainable-development-goals.png" alt="United Nations Sustainable Development Goals">
   </header>
 
-  <section id="uploadStage" style="width:100%;display:flex;flex-direction:column;align-items:center">
+  <span class="leaf leaf-top-left" aria-hidden="true">🌿</span><span class="leaf leaf-top-right" aria-hidden="true">🌿</span><section id="uploadStage" style="width:100%;display:flex;flex-direction:column;align-items:center">
     <h1 class="step-title">Get Your <span class="big">Sustainability Achievement Badge</span> for Your Repaired Shoes</h1>
-    <button class="frame" id="photoFrame" type="button" aria-label="Tap to upload your shoes">
+    <button class="frame" id="photoFrame" type="button" aria-label="Tap to upload your shoes"><span class="leaf leaf-bottom-left" aria-hidden="true">🌿</span><span class="leaf leaf-bottom-right" aria-hidden="true">🌿</span>
       <div class="placeholder" id="placeholder"><div class="camera-icon">◎</div><strong>Tap to Upload Your Shoes</strong><small>Take a photo or choose<br>from your gallery</small></div>
       <img id="frameImage" class="hidden" alt="Your selected footwear">
     </button>
@@ -74,8 +74,8 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
   <section id="resultStage" class="hidden" style="width:100%">
     <article class="achievement" id="achievementCard">
       <header class="brand-row" aria-label="Flying Cobbler and United Nations Sustainable Development Goals"><div class="brand"><img src="flying-cobbler-logo.jpg" alt="Flying Cobbler"></div><div class="brand-divider" aria-hidden="true"></div><img class="sdg-logo" src="un-sustainable-development-goals.png" alt="United Nations Sustainable Development Goals"></header>
-      <h2>MY SUSTAINABILITY ACHIEVEMENT</h2>
-      <div class="recycle" aria-label="recycling symbol">♻️</div>
+      <h2>YOUR SUSTAINABILITY<br>ACHIEVEMENT BADGE</h2>
+      <div class="impact-pill">♻️ MY REPAIRED SHOES<br>MADE A DIFFERENCE</div>
       <img id="resultPhoto" class="photo-result" alt="Your repaired shoes">
       <div class="sdg12"><b>12</b><span>RESPONSIBLE<br>CONSUMPTION<br>AND PRODUCTION</span><span class="infinity">∞</span></div>
       <p class="message">I gave my shoes a new life instead of discarding them. I'm proud to make a more sustainable choice and help reduce waste.</p>
@@ -121,7 +121,7 @@ function makeBlob(){return new Promise(resolve=>{
  function draw(){c.textAlign='center';if(logo.complete&&logo.naturalWidth)contain(logo,95,70,390,190);else{c.fillStyle='#103522';c.font='bold 40px Arial';c.fillText('FLYING COBBLER',290,170)}
  const sdgImg=new Image();sdgImg.onload=()=>{contain(sdgImg,590,95,390,125);finishDraw()};sdgImg.onerror=finishDraw;
  function finishDraw(){c.strokeStyle='#aebcaf';c.lineWidth=2;c.beginPath();c.moveTo(540,80);c.lineTo(540,260);c.stroke();
- c.fillStyle='#103522';c.font='bold 37px Arial';c.fillText('MY SUSTAINABILITY ACHIEVEMENT',540,320);c.font='105px Arial';c.fillText('♻️',540,450);cover(img,90,500,900,620);
+ c.fillStyle='#103522';c.font='bold 34px Arial';c.fillText('YOUR SUSTAINABILITY ACHIEVEMENT',540,320);c.fillStyle='#075b35';c.beginPath();c.roundRect(290,365,500,110,25);c.fill();c.fillStyle='#fff';c.font='bold 28px Arial';c.fillText('♻️ MY REPAIRED SHOES',540,410);c.fillText('MADE A DIFFERENCE',540,448);cover(img,90,500,900,620);
  c.fillStyle='#bf8b2e';c.beginPath();c.roundRect(120,530,210,200,20);c.fill();c.fillStyle='#fff';c.font='bold 70px Arial';c.fillText('12',225,615);c.font='bold 21px Arial';c.fillText('RESPONSIBLE',225,655);c.fillText('CONSUMPTION',225,684);c.fillText('AND PRODUCTION',225,713);
  c.fillStyle='#193a29';c.font='34px Arial';c.fillText('I gave my shoes a new life',540,1200);c.fillText('instead of discarding them. I’m proud',540,1250);c.fillText('to make a more sustainable choice',540,1300);c.fillText('and help reduce waste.',540,1350);
  c.strokeStyle='#9aab98';c.lineWidth=2;c.beginPath();c.moveTo(130,1420);c.lineTo(950,1420);c.stroke();c.fillStyle='#103522';c.font='bold 30px Arial';c.fillText('EVERY RESPONSIBLE CHOICE MATTERS. 🌍',540,1490);c.font='25px Arial';c.fillText('My sustainability achievement, made possible',540,1570);c.fillText('with Flying Cobbler.',540,1610);resolve(canvas)}
