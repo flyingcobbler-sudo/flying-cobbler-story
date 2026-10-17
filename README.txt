@@ -1,2 +1,5 @@
-FLYING COBBLER SUSTAINABILITY STORY PAGE — UPDATED FILES
-Upload index.html and flying-cobbler-logo.jpg to the existing GitHub repository, replacing the previous index.html. The new page uses the supplied official Flying Cobbler logo at the top and on the share card. It includes separate “Take a photo” and “Choose from gallery” buttons. Camera launch depends on device/browser support; some phones show a camera/gallery chooser. Photos are processed in the browser and are not uploaded to a server. Social apps may require manual image selection. SDG 12 is shown as a text badge, not official UN artwork.
+Flying Cobbler Sustainability Story update
+
+Upload this index.html to your existing GitHub repository, replacing the current index.html. Keep the existing flying-cobbler-logo.jpg in the repository root. Vercel should redeploy automatically after the commit.
+
+The page is mobile-first and shows one stage at a time: photo selection, then achievement card and sharing/download. The existing flyingcobbler.com website is not changed.
