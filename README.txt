@@ -1,5 +1,16 @@
-Flying Cobbler Sustainability Story update
+FLYING COBBLER SUSTAINABILITY STORY — FINAL FILES
 
-Upload this index.html to your existing GitHub repository, replacing the current index.html. Keep the existing flying-cobbler-logo.jpg in the repository root. Vercel should redeploy automatically after the commit.
+1. Upload index.html to the root of your GitHub repository, replacing the old index.html.
+2. Keep your existing flying-cobbler-logo.jpg in the same repository root. This file is referenced by index.html.
+3. Commit the change. Vercel should automatically redeploy if the repository is connected.
 
-The page is mobile-first and shows one stage at a time: photo selection, then achievement card and sharing/download. The existing flyingcobbler.com website is not changed.
+Included:
+- Mobile-first photo upload screen
+- Camera and gallery selection
+- Generated sustainability card with recycling symbol only under the achievement heading
+- SDG 12 badge on the finished card (no SDG wheel on the upload screen)
+- Instagram reminder: “Don't forget to tag @flyingcobbler!”
+- Suggested caption and Copy caption button
+- Download card, native share, and Open Instagram instructions
+
+Note: Instagram does not allow an external website to automatically attach a clickable Story mention. The customer must add @flyingcobbler with Instagram's Mention sticker.
