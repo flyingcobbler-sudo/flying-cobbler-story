@@ -1,15 +1,16 @@
-FLYING COBBLER SUSTAINABILITY STORY — MOCKUP-ALIGNED VERSION
+FLYING COBBLER — SUSTAINABILITY BENEFIT ICON UPDATE
 
-Replace index.html in your GitHub repository root with this version.
-Keep flying-cobbler-logo.jpg and un-sustainable-development-goals.png in the repository root.
+Replace index.html in your GitHub repository root with this file.
+Keep these assets in the same repository root:
+- flying-cobbler-logo.jpg
+- un-sustainable-development-goals.png
 
-This version more closely matches the approved visual concept:
-- white page background and Flying Cobbler / UN SDGs logos side-by-side
-- dark forest-green photo frame, subtle shoe watermark and leaf accents
-- heading: “Get Your Sustainability Achievement Badge for Your Repaired Shoes”
-- photo prompt: “Tap to Upload Your Shoes”
-- achievement card with both logos and a green achievement message
-- no suggested caption section
-- sharing/download buttons and @flyingcobbler reminder
-
-Commit the files to GitHub; Vercel should redeploy if connected.
+Changes:
+- Removed the gold SDG 12 / “Responsible Consumption and Production” badge from the achievement card.
+- Added four benefit icons and labels, based on the concept you approved:
+  1. Extends Product Life
+  2. Reduces Waste
+  3. Lower Carbon Footprint
+  4. Supports a Greener Planet
+- Applied the change to both the on-screen card and downloaded image.
+- Kept the rest of the flow and Instagram @flyingcobbler reminder.

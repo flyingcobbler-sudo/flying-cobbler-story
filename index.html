@@ -35,8 +35,7 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
 .achievement h2{font-size:19px;color:var(--green);margin:4px 0 6px;line-height:1.2}
 .recycle{font-size:68px;line-height:1.12;margin:0 0 10px}.impact-pill{display:inline-block;background:#075b35;color:#fff;border-radius:18px;padding:12px 18px;margin:10px auto 14px;font-size:clamp(14px,3.8vw,18px);font-weight:800;line-height:1.35}
 .photo-result{width:100%;height:245px;object-fit:cover;border-radius:15px;display:block;background:#dce5d9}
-.sdg12{position:relative;margin:-232px 0 182px 8px;background:var(--gold);border:2px solid white;border-radius:12px;color:white;width:100px;height:100px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:0 2px 8px #0002}
-.sdg12 b{font-size:32px;line-height:1}.sdg12 span{font-size:9px;font-weight:800;line-height:1.15;margin-top:4px}.sdg12 .infinity{font-size:24px}
+.benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:18px 0 8px}.benefit{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:7px;color:var(--green);font-size:10px;font-weight:800;line-height:1.2;text-align:center}.benefit-icon{width:48px;height:48px;border-radius:50%;background:#dff0a9;display:grid;place-items:center;font-size:26px;line-height:1}.benefit-label{max-width:90px}
 .message{font-size:15px;line-height:1.5;margin:10px 4px 14px}
 .rule{height:1px;background:#9aab98;margin:12px 10px}
 .footerline{font-weight:800;font-size:14px;color:var(--green);line-height:1.4}
@@ -77,7 +76,12 @@ body{margin:0;background:#0c281b;color:var(--ink);font-family:Arial,Helvetica,sa
       <h2>YOUR SUSTAINABILITY<br>ACHIEVEMENT BADGE</h2>
       <div class="impact-pill">♻️ MY REPAIRED SHOES<br>MADE A DIFFERENCE</div>
       <img id="resultPhoto" class="photo-result" alt="Your repaired shoes">
-      <div class="sdg12"><b>12</b><span>RESPONSIBLE<br>CONSUMPTION<br>AND PRODUCTION</span><span class="infinity">∞</span></div>
+      <div class="benefit-grid" aria-label="Sustainability benefits">
+        <div class="benefit"><div class="benefit-icon">🌱</div><div class="benefit-label">EXTENDS<br>PRODUCT LIFE</div></div>
+        <div class="benefit"><div class="benefit-icon">♻️</div><div class="benefit-label">REDUCES<br>WASTE</div></div>
+        <div class="benefit"><div class="benefit-icon">☁️</div><div class="benefit-label">LOWER CARBON<br>FOOTPRINT</div></div>
+        <div class="benefit"><div class="benefit-icon">🌿</div><div class="benefit-label">SUPPORTS A<br>GREENER PLANET</div></div>
+      </div>
       <p class="message">I gave my shoes a new life instead of discarding them. I'm proud to make a more sustainable choice and help reduce waste.</p>
       <div class="rule"></div>
       <div class="footerline">EVERY RESPONSIBLE CHOICE MATTERS. 🌍</div>
@@ -122,9 +126,8 @@ function makeBlob(){return new Promise(resolve=>{
  const sdgImg=new Image();sdgImg.onload=()=>{contain(sdgImg,590,95,390,125);finishDraw()};sdgImg.onerror=finishDraw;
  function finishDraw(){c.strokeStyle='#aebcaf';c.lineWidth=2;c.beginPath();c.moveTo(540,80);c.lineTo(540,260);c.stroke();
  c.fillStyle='#103522';c.font='bold 34px Arial';c.fillText('YOUR SUSTAINABILITY ACHIEVEMENT',540,320);c.fillStyle='#075b35';c.beginPath();c.roundRect(290,365,500,110,25);c.fill();c.fillStyle='#fff';c.font='bold 28px Arial';c.fillText('♻️ MY REPAIRED SHOES',540,410);c.fillText('MADE A DIFFERENCE',540,448);cover(img,90,500,900,620);
- c.fillStyle='#bf8b2e';c.beginPath();c.roundRect(120,530,210,200,20);c.fill();c.fillStyle='#fff';c.font='bold 70px Arial';c.fillText('12',225,615);c.font='bold 21px Arial';c.fillText('RESPONSIBLE',225,655);c.fillText('CONSUMPTION',225,684);c.fillText('AND PRODUCTION',225,713);
  c.fillStyle='#193a29';c.font='34px Arial';c.fillText('I gave my shoes a new life',540,1200);c.fillText('instead of discarding them. I’m proud',540,1250);c.fillText('to make a more sustainable choice',540,1300);c.fillText('and help reduce waste.',540,1350);
- c.strokeStyle='#9aab98';c.lineWidth=2;c.beginPath();c.moveTo(130,1420);c.lineTo(950,1420);c.stroke();c.fillStyle='#103522';c.font='bold 30px Arial';c.fillText('EVERY RESPONSIBLE CHOICE MATTERS. 🌍',540,1490);c.font='25px Arial';c.fillText('My sustainability achievement, made possible',540,1570);c.fillText('with Flying Cobbler.',540,1610);resolve(canvas)}
+ const benefitXs=[170,420,660,910];const benefitEmojis=['🌱','♻️','☁️','🌿'];const benefitLines=[['EXTENDS','PRODUCT LIFE'],['REDUCES','WASTE'],['LOWER CARBON','FOOTPRINT'],['SUPPORTS A','GREENER PLANET']];c.textAlign='center';for(let i=0;i<4;i++){c.fillStyle='#dff0a9';c.beginPath();c.arc(benefitXs[i],1410,48,0,Math.PI*2);c.fill();c.font='54px Arial';c.fillText(benefitEmojis[i],benefitXs[i],1428);c.fillStyle='#103522';c.font='bold 17px Arial';c.fillText(benefitLines[i][0],benefitXs[i],1490);c.fillText(benefitLines[i][1],benefitXs[i],1515)}c.strokeStyle='#9aab98';c.lineWidth=2;c.beginPath();c.moveTo(130,1570);c.lineTo(950,1570);c.stroke();c.fillStyle='#103522';c.font='bold 30px Arial';c.fillText('EVERY RESPONSIBLE CHOICE MATTERS. 🌍',540,1635);c.font='25px Arial';c.fillText('My sustainability achievement, made possible',540,1710);c.fillText('with Flying Cobbler.',540,1750);resolve(canvas)}
  sdgImg.src='un-sustainable-development-goals.png';
  }
  if(img.complete&&img.naturalWidth){if(logo.complete)draw();else logo.onload=draw}else img.onload=()=>{if(logo.complete)draw();else logo.onload=draw};
