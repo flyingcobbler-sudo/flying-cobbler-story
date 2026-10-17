@@ -1,116 +1,33 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#173d2b">
-<title>My Sustainability Achievement | Flying Cobbler</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173d2b"><title>My Sustainability Achievement | Flying Cobbler</title>
 <style>
-:root{--green:#173d2b;--green2:#dcebdd;--cream:#f7f7f1;--ink:#20352a;--muted:#647468}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f5f1;color:var(--ink)}
-main{max-width:980px;margin:0 auto;padding:22px 16px 42px}
-header{text-align:center;margin-bottom:22px}
-.brand{font-weight:800;letter-spacing:1.6px;color:var(--green);font-size:20px}
-header p{color:var(--muted);margin:8px 0 0;font-size:14px}
-.layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
-.panel{background:white;border-radius:18px;padding:20px;box-shadow:0 5px 24px #1a33220d}
-h1{font-size:23px;margin:0 0 8px} .intro{color:var(--muted);line-height:1.5;font-size:14px;margin:0 0 18px}
-label{display:block;font-size:14px;font-weight:700;margin:16px 0 8px}
-input[type=file]{width:100%;padding:12px;border:1px solid #d5ddd5;border-radius:10px;background:#fbfcfa}
-input[type=text]{width:100%;padding:12px;border:1px solid #d5ddd5;border-radius:10px;font-size:15px}
-button{border:0;border-radius:11px;padding:13px 15px;font-size:14px;font-weight:700;cursor:pointer}
-.primary{background:var(--green);color:white;width:100%;margin-top:16px}
-.secondary{background:#e8eee7;color:var(--green);width:100%;margin-top:9px}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
-.actions button{background:#e8eee7;color:var(--green)}
-.hint{font-size:12px;color:var(--muted);line-height:1.45;margin-top:10px}
-.preview-wrap{background:#e7ece6;border-radius:15px;padding:12px;text-align:center}
-canvas{width:100%;height:auto;max-width:360px;border-radius:9px;background:#173d2b;display:block;margin:0 auto}
-.status{font-size:13px;min-height:18px;margin-top:10px;color:var(--green)}
-.footnote{font-size:12px;color:var(--muted);line-height:1.5;margin-top:18px}
-@media(max-width:720px){.layout{grid-template-columns:1fr}main{padding:16px 12px 28px}.panel{padding:16px}.preview-wrap{max-width:420px;margin:0 auto;width:100%}}
-</style>
-</head>
-<body>
-<main>
-<header>
-  <div class="brand" id="brandText">FLYING COBBLER</div>
-  <p>Create a card celebrating your choice to give your footwear a second life.</p>
-</header>
-<div class="layout">
-<section class="panel">
-  <h1>My Sustainability Achievement</h1>
-  <p class="intro">Upload a photo of your footwear after its restoration. Preview your personal card, then download or share it.</p>
-  <label for="photo">1. Choose your footwear photo</label>
-  <input id="photo" type="file" accept="image/*" capture="environment">
-  <label for="name">2. Your name (optional)</label>
-  <input id="name" type="text" maxlength="35" placeholder="e.g. Your name">
-  <button class="primary" id="make">Create my card</button>
-  <button class="secondary" id="download">Download card</button>
-  <div class="actions">
-    <button id="share">Share card</button>
-    <button id="whatsapp">WhatsApp</button>
-    <button id="instagram">Instagram</button>
-    <button id="facebook">Facebook</button>
-  </div>
-  <p class="hint">Tip: A clear photo of your footwear works best. The Share Card button may open your phone's sharing menu. If a social app does not accept direct sharing, download the image first and upload it inside that app.</p>
-  <div class="status" id="status" role="status">Choose a photo to begin.</div>
-</section>
-<section class="panel">
-  <h1>Card preview</h1>
-  <p class="intro">Your photo appears in a vertical story format.</p>
-  <div class="preview-wrap"><canvas id="card" width="1080" height="1920" aria-label="Sustainability card preview"></canvas></div>
-  <p class="footnote">This card celebrates a personal choice to reuse. The SDG 12 reference relates to responsible consumption and production; it does not claim a measured amount of environmental impact.</p>
-</section>
-</div>
-</main>
+:root{--g:#173d2b;--p:#e8eee7;--ink:#20352a;--muted:#647468}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f5f1;color:var(--ink)}main{max-width:980px;margin:auto;padding:22px 16px 42px}header{text-align:center;margin-bottom:22px}.site-logo{width:150px;max-width:45%;height:auto;display:block;margin:0 auto 10px}header p{color:var(--muted);font-size:14px}.layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.panel{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 24px #1a33220d;min-width:0}h1{font-size:23px;margin:0 0 8px}.intro{color:var(--muted);line-height:1.5;font-size:14px;margin:0 0 18px}label{display:block;font-size:14px;font-weight:bold;margin:16px 0 8px}input[type=text]{width:100%;padding:12px;border:1px solid #d5ddd5;border-radius:10px;font-size:15px}button{border:0;border-radius:11px;padding:13px 10px;font-size:14px;font-weight:bold;cursor:pointer}.photo-actions,.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.photo-actions button,.actions button,.secondary{background:var(--p);color:var(--g)}.primary{background:var(--g);color:#fff;width:100%;margin-top:16px}.secondary{width:100%;margin-top:9px}.actions{margin-top:10px}.hint,.footnote{font-size:12px;color:var(--muted);line-height:1.45;margin-top:10px}.preview-wrap{background:#e7ece6;border-radius:15px;padding:12px;text-align:center}canvas{width:100%;height:auto;max-width:360px;border-radius:9px;background:#173d2b;display:block;margin:auto}.status{font-size:13px;min-height:18px;margin-top:10px;color:var(--g)}.hidden-file{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}@media(max-width:720px){.layout{grid-template-columns:1fr}main{padding:16px 12px 28px}.panel{padding:16px}}
+</style></head><body><main>
+<header><img class="site-logo" src="flying-cobbler-logo.jpg" alt="Flying Cobbler — Expert Cobblers Destination"><p>Create a card celebrating your choice to give your footwear a second life.</p></header>
+<div class="layout"><section class="panel"><h1>My Sustainability Achievement</h1><p class="intro">Add a photo of your footwear after its restoration. Preview your personal card, then download or share it.</p>
+<label>1. Add your footwear photo</label><div class="photo-actions"><button id="takePhoto" type="button">📷 Take a photo</button><button id="choosePhoto" type="button">🖼 Choose from gallery</button></div>
+<input class="hidden-file" id="cameraInput" type="file" accept="image/*" capture="environment"><input class="hidden-file" id="galleryInput" type="file" accept="image/*">
+<label for="name">2. Your name (optional)</label><input id="name" type="text" maxlength="35" placeholder="e.g. Your name">
+<button class="primary" id="make">Create my card</button><button class="secondary" id="download">Download card</button>
+<div class="actions"><button id="share">Share card</button><button id="whatsapp">WhatsApp</button><button id="instagram">Instagram</button><button id="facebook">Facebook</button></div>
+<p class="hint">On a phone, “Take a photo” asks your device to open its camera when supported. If it shows a camera/gallery chooser, select Camera. Instagram and Facebook may require you to select the downloaded image inside their apps.</p><div class="status" id="status" role="status">Take a photo or choose one from your gallery.</div></section>
+<section class="panel"><h1>Card preview</h1><p class="intro">Your photo appears in a vertical Story format.</p><div class="preview-wrap"><canvas id="card" width="1080" height="1920" aria-label="Sustainability card preview"></canvas></div><p class="footnote">This card celebrates a personal choice to extend the life of footwear. SDG 12 relates to responsible consumption and production; no specific environmental savings are claimed.</p></section></div></main>
 <script>
-const canvas=document.getElementById('card'),ctx=canvas.getContext('2d');
-const photoInput=document.getElementById('photo'),nameInput=document.getElementById('name'),statusEl=document.getElementById('status');
-let photo=null;
-function roundedRect(c,x,y,w,h,r,fill,stroke){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);if(fill)c.fill();if(stroke)c.stroke();}
-function drawCover(img,x,y,w,h){const ir=img.width/img.height,cr=w/h;let sx=0,sy=0,sw=img.width,sh=img.height;if(ir>cr){sw=img.height*cr;sx=(img.width-sw)/2}else{sh=img.width/cr;sy=(img.height-sh)/2}ctx.drawImage(img,sx,sy,sw,sh,x,y,w,h)}
-function wrapText(text,x,y,maxWidth,lineHeight,maxLines){const words=text.split(' ');let line='',lines=[];for(let n=0;n<words.length;n++){let test=line+words[n]+' ';if(ctx.measureText(test).width>maxWidth&&n>0){lines.push(line.trim());line=words[n]+' '}else line=test}if(line.trim())lines.push(line.trim());lines=lines.slice(0,maxLines);lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lineHeight));}
-function draw(){
- const W=1080,H=1920;ctx.clearRect(0,0,W,H);
- const grad=ctx.createLinearGradient(0,0,0,H);grad.addColorStop(0,'#173d2b');grad.addColorStop(1,'#0d281c');ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);
- // subtle border
- ctx.strokeStyle='#b8d6bd';ctx.lineWidth=5;roundedRect(ctx,38,38,W-76,H-76,34,false,true);
- // logo area: replace this text with the official logo when supplied
- ctx.fillStyle='#ffffff';ctx.textAlign='center';ctx.font='bold 43px Arial';ctx.fillText('FLYING COBBLER',W/2,132);
- ctx.fillStyle='#c8e6ce';ctx.font='bold 30px Arial';ctx.fillText('MY SUSTAINABILITY ACHIEVEMENT',W/2,220);
- ctx.fillStyle='#ffffff';ctx.font='bold 62px Arial';ctx.fillText('I CHOSE TO RECYCLE.',W/2,315);
- // photo frame
- const px=100,py=390,pw=880,ph=830;ctx.fillStyle='#f4f5ed';roundedRect(ctx,px,py,pw,ph,28,true,false);
- ctx.save();ctx.beginPath();ctx.roundRect(px+14,py+14,pw-28,ph-28,18);ctx.clip();
- if(photo){drawCover(photo,px+14,py+14,pw-28,ph-28)}else{
-  ctx.fillStyle='#dfe9dc';ctx.fillRect(px+14,py+14,pw-28,ph-28);
-  ctx.fillStyle='#315b3b';ctx.font='bold 38px Arial';ctx.textAlign='center';ctx.fillText('YOUR FOOTWEAR PHOTO',W/2,py+ph/2-12);
-  ctx.font='28px Arial';ctx.fillText('will appear here',W/2,py+ph/2+38);
- }
- ctx.restore();
- // SDG 12 badge on photo frame
- ctx.fillStyle='#bf8b2e';ctx.fillRect(px+28,py+28,245,115);
- ctx.fillStyle='#fff';ctx.textAlign='left';ctx.font='bold 42px Arial';ctx.fillText('12',px+48,py+77);
- ctx.font='bold 17px Arial';ctx.fillText('RESPONSIBLE',px+48,py+103);ctx.fillText('CONSUMPTION',px+48,126);
- // copy
- ctx.textAlign='center';ctx.fillStyle='#ffffff';ctx.font='bold 48px Arial';ctx.fillText('I GAVE MY FOOTWEAR',W/2,1320);ctx.fillText('A NEW LIFE.',W/2,1380);
- ctx.fillStyle='#e0eee1';ctx.font='32px Arial';
- wrapText('Instead of discarding my footwear, I chose to give it another life. I am proud to make a more sustainable choice and help reduce waste.',W/2,1460,850,48,4);
- const person=nameInput.value.trim();if(person){ctx.fillStyle='#c8e6ce';ctx.font='bold 30px Arial';ctx.fillText('— '+person+' —',W/2,1690)}
- ctx.fillStyle='#c8e6ce';ctx.font='bold 28px Arial';ctx.fillText('EVERY RESPONSIBLE CHOICE MATTERS.',W/2,1760);
- ctx.fillStyle='#ffffff';ctx.font='24px Arial';ctx.fillText('My sustainability achievement, made possible with Flying Cobbler',W/2,1820);
-}
-photoInput.addEventListener('change',()=>{const f=photoInput.files&&photoInput.files[0];if(!f)return;if(!f.type.startsWith('image/')){statusEl.textContent='Please choose an image file.';return}const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{photo=img;draw();statusEl.textContent='Photo added. Your card is ready to preview.'};img.onerror=()=>statusEl.textContent='Could not read that image. Please try another.';img.src=reader.result};reader.readAsDataURL(f)});
-nameInput.addEventListener('input',draw);
-document.getElementById('make').addEventListener('click',()=>{draw();statusEl.textContent=photo?'Your card is ready. Download or share it.':'Please choose your footwear photo first.'});
-function downloadCard(){draw();canvas.toBlob(blob=>{if(!blob){statusEl.textContent='Could not create the image. Please try again.';return}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='my-sustainability-achievement.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);statusEl.textContent='Your card has been downloaded.'},'image/png')}
-document.getElementById('download').addEventListener('click',downloadCard);
-document.getElementById('share').addEventListener('click',async()=>{draw();canvas.toBlob(async blob=>{if(!blob)return;const file=new File([blob],'my-sustainability-achievement.png',{type:'image/png'});if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'My Sustainability Achievement',text:'I chose to give my footwear a new life.'});statusEl.textContent='Choose the app where you want to share your card.'}catch(e){if(e.name!=='AbortError')statusEl.textContent='Sharing was not available. Please download the card instead.'}}else{downloadCard();statusEl.textContent='Card downloaded. Open your preferred social app and upload it to your Story or Status.'}},'image/png')});
-document.getElementById('whatsapp').addEventListener('click',()=>{downloadCard();window.open('https://wa.me/?text='+encodeURIComponent('I chose to give my footwear a new life. #Sustainability'),'_blank','noopener')});
-document.getElementById('instagram').addEventListener('click',()=>{downloadCard();window.open('https://www.instagram.com/','_blank','noopener');statusEl.textContent='Card downloaded. In Instagram, create a Story and select the downloaded image.'});
-document.getElementById('facebook').addEventListener('click',()=>{downloadCard();window.open('https://www.facebook.com/','_blank','noopener');statusEl.textContent='Card downloaded. In Facebook, create a Story and select the downloaded image.'});
-draw();
-</script>
-</body>
-</html>
+const canvas=document.getElementById('card'),ctx=canvas.getContext('2d'),cameraInput=document.getElementById('cameraInput'),galleryInput=document.getElementById('galleryInput'),nameInput=document.getElementById('name'),statusEl=document.getElementById('status');const logo=new Image();logo.src='flying-cobbler-logo.jpg';let photo=null;
+function rr(x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);if(fill)ctx.fill();if(stroke)ctx.stroke()}
+function cover(img,x,y,w,h){let ir=img.width/img.height,cr=w/h,sx=0,sy=0,sw=img.width,sh=img.height;if(ir>cr){sw=img.height*cr;sx=(img.width-sw)/2}else{sh=img.width/cr;sy=(img.height-sh)/2}ctx.drawImage(img,sx,sy,sw,sh,x,y,w,h)}
+function contain(img,x,y,w,h){let s=Math.min(w/img.width,h/img.height),dw=img.width*s,dh=img.height*s;ctx.drawImage(img,x+(w-dw)/2,y+(h-dh)/2,dw,dh)}
+function wrap(t,x,y,mw,lh,max){let words=t.split(' '),line='',lines=[];for(let i=0;i<words.length;i++){let test=line+words[i]+' ';if(ctx.measureText(test).width>mw&&i>0){lines.push(line.trim());line=words[i]+' '}else line=test}if(line.trim())lines.push(line.trim());lines.slice(0,max).forEach((l,i)=>ctx.fillText(l,x,y+i*lh))}
+function draw(){let W=1080,H=1920;ctx.clearRect(0,0,W,H);let gr=ctx.createLinearGradient(0,0,0,H);gr.addColorStop(0,'#173d2b');gr.addColorStop(1,'#0d281c');ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);ctx.strokeStyle='#b8d6bd';ctx.lineWidth=5;rr(38,38,W-76,H-76,34,false,true);
+ctx.fillStyle='#fff';rr(330,52,420,340,20,true,false);if(logo.complete&&logo.naturalWidth)contain(logo,342,62,396,320);else{ctx.fillStyle='#173d2b';ctx.textAlign='center';ctx.font='bold 38px Arial';ctx.fillText('FLYING COBBLER',W/2,220)}
+ctx.textAlign='center';ctx.fillStyle='#c8e6ce';ctx.font='bold 29px Arial';ctx.fillText('MY SUSTAINABILITY ACHIEVEMENT',W/2,455);ctx.fillStyle='#fff';ctx.font='bold 56px Arial';ctx.fillText('I CHOSE TO RECYCLE.',W/2,535);
+let px=100,py=590,pw=880,ph=680;ctx.fillStyle='#f4f5ed';rr(px,py,pw,ph,28,true,false);ctx.save();ctx.beginPath();ctx.roundRect(px+14,py+14,pw-28,ph-28,18);ctx.clip();if(photo)cover(photo,px+14,py+14,pw-28,ph-28);else{ctx.fillStyle='#dfe9dc';ctx.fillRect(px+14,py+14,pw-28,ph-28);ctx.fillStyle='#315b3b';ctx.font='bold 38px Arial';ctx.fillText('YOUR FOOTWEAR PHOTO',W/2,py+ph/2-12);ctx.font='28px Arial';ctx.fillText('will appear here',W/2,py+ph/2+38)}ctx.restore();
+ctx.fillStyle='#bf8b2e';rr(px+30,py+30,300,112,10,true,false);ctx.fillStyle='#fff';ctx.textAlign='left';ctx.font='bold 37px Arial';ctx.fillText('SDG 12',px+48,py+74);ctx.font='bold 19px Arial';ctx.fillText('RESPONSIBLE',px+48,py+101);ctx.fillText('CONSUMPTION',px+48,py+124);
+ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='bold 47px Arial';ctx.fillText('I GAVE MY FOOTWEAR',W/2,1350);ctx.fillText('A NEW LIFE.',W/2,1410);ctx.fillStyle='#e0eee1';ctx.font='31px Arial';wrap('Instead of discarding my footwear, I chose to give it another life. I am proud to make a more sustainable choice and help reduce waste.',W/2,1480,850,45,4);let person=nameInput.value.trim();if(person){ctx.fillStyle='#c8e6ce';ctx.font='bold 30px Arial';ctx.fillText('— '+person+' —',W/2,1690)}ctx.fillStyle='#c8e6ce';ctx.font='bold 27px Arial';ctx.fillText('EVERY RESPONSIBLE CHOICE MATTERS.',W/2,1750);ctx.fillStyle='#fff';ctx.font='23px Arial';ctx.fillText('My sustainability achievement, made possible with Flying Cobbler',W/2,1810)}
+function handlePhoto(input){let f=input.files&&input.files[0];if(!f)return;if(!f.type.startsWith('image/')){statusEl.textContent='Please choose an image file.';return}let r=new FileReader();r.onload=()=>{let im=new Image();im.onload=()=>{photo=im;draw();statusEl.textContent='Photo added. Your card is ready to preview.'};im.onerror=()=>statusEl.textContent='Could not read that image. Please try another.';im.src=r.result};r.readAsDataURL(f)}
+document.getElementById('takePhoto').onclick=()=>cameraInput.click();document.getElementById('choosePhoto').onclick=()=>galleryInput.click();cameraInput.onchange=()=>handlePhoto(cameraInput);galleryInput.onchange=()=>handlePhoto(galleryInput);nameInput.oninput=draw;logo.onload=draw;
+document.getElementById('make').onclick=()=>{draw();statusEl.textContent=photo?'Your card is ready. Download or share it.':'Please take or choose your footwear photo first.'};
+function downloadCard(){draw();canvas.toBlob(b=>{if(!b){statusEl.textContent='Could not create the image. Please try again.';return}let u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='my-sustainability-achievement.png';a.click();setTimeout(()=>URL.revokeObjectURL(u),1500);statusEl.textContent='Your card has been downloaded.'},'image/png')}
+document.getElementById('download').onclick=downloadCard;document.getElementById('share').onclick=()=>{draw();canvas.toBlob(async b=>{if(!b)return;let f=new File([b],'my-sustainability-achievement.png',{type:'image/png'});if(navigator.share&&navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:'My Sustainability Achievement',text:'I chose to give my footwear a new life.'});statusEl.textContent='Choose the app where you want to share your card.'}catch(e){if(e.name!=='AbortError')statusEl.textContent='Sharing unavailable. Please download the card instead.'}}else{downloadCard();statusEl.textContent='Card downloaded. Open your social app and upload it to your Story or Status.'}},'image/png')};
+document.getElementById('whatsapp').onclick=()=>{downloadCard();window.open('https://wa.me/?text='+encodeURIComponent('I chose to give my footwear a new life. #Sustainability'),'_blank','noopener')};document.getElementById('instagram').onclick=()=>{downloadCard();window.open('https://www.instagram.com/','_blank','noopener');statusEl.textContent='Card downloaded. In Instagram, create a Story and select the downloaded image.'};document.getElementById('facebook').onclick=()=>{downloadCard();window.open('https://www.facebook.com/','_blank','noopener');statusEl.textContent='Card downloaded. In Facebook, create a Story and select the downloaded image.'};draw();
+</script></body></html>
